@@ -112,10 +112,6 @@ def gaussian_vector(v : np.array,  alpha : float) :
     return b
 
 
-
-
-
-
 def gaussian_elimination(L : np.matrix , b : np.array): 
 
     if len(L[0:]) != len(b): 
@@ -175,28 +171,6 @@ def score(augmented_matrix : np.matrix):
         
     return u
 
-
-
-        
- 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 def pageRankLinear (A : np.matrix , alpha : float , v : np.array ):
     """
     :param A : Une matrice d adjacence A d un graphe dirigé, pondéré et régulier G, 
@@ -237,19 +211,10 @@ def pageRankLinear (A : np.matrix , alpha : float , v : np.array ):
 
 
 
-    
-
    
-
-
-A = np.matrix([[0,2,0],[0,0,2],[1,1,0]])
-v = np.array([[1/6],[3/6],[2/6]])
-alpha = 1
-
-
-"""A = np.matrix([[0,1,0,0,0,0],[0,0,1,1,0,0],[0,0,0,1,1,1],[1,0,0,0,0,0],[0,0,0,0,0,1],[1,0,0,0,0,0]])
+A = np.matrix([[0,1,0,0,0,0],[0,0,1,1,0,0],[0,0,0,1,1,1],[1,0,0,0,0,0],[0,0,0,0,0,1],[1,0,0,0,0,0]])
 v = np.array([[1/6],[1/6],[1/6],[1/6],[1/6],[1/6]])
-alpha = 0.85"""
+alpha = 0.85
 
 
 print(pageRankLinear(A,alpha,v))

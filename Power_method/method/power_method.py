@@ -32,12 +32,10 @@ def transitionmatrix(A : np.matrix, D: np.matrix) :
     # Cette fonction prend une matrice d'adjacence A et une matrice diagonale D en entrée
     # et retourne la matrice de transition P.
     inv_D = inverseD(D)
+    
     P = transpose(A) * inv_D
 
-    if  np.sum(P[:,0]) != 1 :
-        return transpose(P)
-    else: 
-        return P
+    
 
 
 def count_node(A : np.matrix) :
